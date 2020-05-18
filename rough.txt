@@ -1,0 +1,166 @@
+ var direction = window.prompt("enter in which direction queen have to move");
+var steps = window.prompt("enter how many steps queen have to move");
+var queen = {
+    position: {
+        row: 2,
+        column: 4
+    }
+};
+var row = [8, 7, 6, 5, 4, 3, 2, 1];
+var column = ["A", "B", "C", "D", "E", "F", "G", "H"];
+var row_result = queen.position.row + parseInt(steps);
+var column_result = queen.position.column;
+
+if (row_result <= 7 && row_result >= 0) {
+
+    var row_array_result = row[row_result];
+    var column_array_result = column[column_result];
+    var position = row_array_result + column_array_result;
+    document.write(position);
+
+}
+else {
+    document.write("queen is going out side of board");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+var row = [8, 7, 6, 5, 4, 3, 2, 1];
+var column = ["A", "B", "C", "D", "E", "F", "G", "H"];
+var queen = {
+    position: {
+        row: 2,
+        column: 4
+    }
+};
+ 
+var direction = window.prompt("enter in which direction queen have to move");
+var steps = window.prompt("enter how many steps queen have to move");
+
+function south()
+{
+var row_result = queen.position.row + parseInt(steps);
+var column_result = queen.position.column;
+
+if (row_result <= 7 && row_result >= 0) {
+
+    var row_array_result = row[row_result];
+    var column_array_result = column[column_result];
+    var position = row_array_result + column_array_result;
+    document.write(position);
+
+}
+else {
+    document.write("queen is going out side of board");
+}
+queen.position.row = row_result;
+queen.position.column = column_result;
+}
+function north()
+{
+    var row_result = queen.position.row - parseInt(steps);
+var column_result = queen.position.column;
+
+if (row_result <= 7 && row_result >= 0) {
+
+    var row_array_result = row[row_result];
+    var column_array_result = column[column_result];
+    var position = row_array_result + column_array_result;
+    document.write(position);
+
+}
+else {
+    document.write("queen is going out side of board");
+}
+queen.position.row = row_result;
+queen.position.column = column_result;
+}
+
+function east()
+{
+    var row_result = queen.position.row ;
+var column_result = queen.position.column + parseInt(steps);
+
+if (row_result <= 7 && row_result >= 0) {
+
+    var row_array_result = row[row_result];
+    var column_array_result = column[column_result];
+    var position = row_array_result + column_array_result;
+    document.write(position);
+
+}
+else {
+    document.write("queen is going out side of board");
+}
+queen.position.row = row_result;
+queen.position.column = column_result;
+}
+function west()
+{
+    var row_result = queen.position.row ;
+    var column_result = queen.position.column - parseInt(steps);
+    
+    if (row_result <= 7 && row_result >= 0) {
+    
+        var row_array_result = row[row_result];
+        var column_array_result = column[column_result];
+        var position = row_array_result + column_array_result;
+        document.write(position);
+    
+    }
+    else {
+        document.write("queen is going out side of board");
+    }
+    queen.position.row = row_result;
+    queen.position.column = column_result;
+    
+}
+function northeast()
+{
+    var row_result = queen.position.row - parseInt(steps) ;
+    var column_result = queen.position.column + parseInt(steps);
+    
+    if (row_result <= 7 && row_result >= 0) {
+    
+        var row_array_result = row[row_result];
+        var column_array_result = column[column_result];
+        var position = row_array_result + column_array_result;
+        document.write(position);
+    
+    }
+    else {
+        document.write("queen is going out side of board");
+    }
+    queen.position.row = row_result;
+    queen.position.column = column_result;
+
+}
+function northwest()
+{
+    var row_result = queen.position.row - parseInt(steps) ;
+    var column_result = queen.position.column + parseInt(steps);
+    
+    if (row_result <= 7 && row_result >= 0) {
+    
+        var row_array_result = row[row_result];
+        var column_array_result = column[column_result];
+        var position = row_array_result + column_array_result;
+        document.write(position);
+    
+    }
+    else {
+        document.write("queen is going out side of board");
+    }
+    queen.position.row = row_result;
+    queen.position.column = column_result;
+    
+}
